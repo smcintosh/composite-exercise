@@ -11,20 +11,23 @@ public class CompositeMain {
 		File opt = new File("Oriental Pearl Tower");
 		File bund = new File("The Bund");
 		File kiyomizu = new File("Kiyomizu Dera");
-		
+		HiddenFile examAnswers = new HiddenFile("Exam Answers");
+
 		shanghai.add(opt);
 		shanghai.add(bund);
 		kyoto.add(kiyomizu);
-		
+
 		photos.add(shanghai);
 		photos.add(kyoto);
-		
+
+		photos.add(examAnswers);
+
 		// List of components
 		List<Component> components = new ArrayList<Component>();
-		
+
 		components.add(photos);
 		components.add(new File("Important Document"));
-		
+
 		// Client code can treat components the same
 		for (Component component : components) {
 			System.out.println(component.ls());
